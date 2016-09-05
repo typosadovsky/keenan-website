@@ -29,24 +29,21 @@
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
         <style type="text/css">
 			body {
-				font-family: 'Open Sans', sans-serif;
+				font-family: 'Helvetica', sans-serif;
 			}
 		</style>
     </head>
     <body class="loading">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
 
         <!-- WEBSITE - START -->
         <div class="m-dropdown">
             <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href=""><li>About</li></a>
-                <a href="gallery.html"><li>Gallery</li></a>
-                <a href=""><li>Music</li></a>
-                <a href="videos.html"><li>Videos</li></a>
-                <a href=""><li>Contact</li></a>
+                <a><li>Home</li></a>
+                <a><li>About</li></a>
+                <a><li>Music</li></a>
+                <a><li>News</li></a>
+                <a><li>Videos</li></a>
+                <a><li>Contact</li></a>
             </ul>
         </div>
         <div class="m-header">
@@ -57,14 +54,31 @@
                     <span class="hamburger-inner"></span>
                     </span>
                 </button>
-                <a href="" id="link_home">Home</a>
-                <a href="" id="link_about">About</a>
-                <a href="" id="link_news">News</a>
-                <a href="" id="link_music">Music</a>
-                <a href="videos.html" id="link_videos">Videos</a>
-                <a href="" id="link_contact">Contact</a>
+                <a id="link_home">Home</a>
+                <a id="link_about">About</a>
+                <a id="link_music">Music</a>
+                <a id="link_news">News</a>
+                <a id="link_videos">Videos</a>
+                <a id="link_contact">Contact</a>
             </div>
         </div>
+
+        <div class="m-header2">
+        	<div class="header2">
+	        	<div class="header2-link-container">
+		        	<a href=""><img src="img/socialmedia/Facebook.png"></img></a>
+		            <a href=""><img src="img/socialmedia/Twitter.png"></img></a>
+		            <a href=""><img src="img/socialmedia/Instagram.png"></img></a>
+		            <a href=""><img src="img/socialmedia/Youtube.png"></img></a>
+		        </div>
+		    </div>
+		    <div class="header2-button" id="button-open">
+		    	<img src="img/connect.png"></img>
+		    </div>
+		    <div class="header2-button" id="button-close">
+		    	<img src="img/close.png"></img>
+		    </div>
+		</div>
        	
        	<div id="preload">
 	       	<img src="img/pics/keenan.jpg">
@@ -74,6 +88,8 @@
        	</div>
        	
        	<main>
+
+
        	 
 	        <section id="slide-1" class="homeSlide">
 	        	<div class="bcg" 
@@ -85,8 +101,8 @@
 		        		<div class="container" id="main_container">
 		        			<div class="ghostbutton-container">
                 			<div class="m-title"><img src="img/k2white.png"></img></div>
-                			<div class="m-ghostbutton">Explore</div>
-                			<div class="m-ghostbutton">Listen</div>
+                			<div class="m-ghostbutton" id="button_explore">Explore</div>
+                			<div class="m-ghostbutton" id="button_listen">Listen</div>
                 			<div class="northriver"><a href="http://www.northriverrecords.ca" target="_blank"><img src="img/northriverwhite.png"></img></a></div>
             				</div>
 			    		<div class="hsContent" data-center="bottom: 200px; opacity: 1" data-top="bottom: 1200px; opacity: 0" data-anchor-target="#slide-1 h2">
@@ -109,6 +125,17 @@
 			    	<div class="hsContainer">
 			    		<div class="container">
 			    			<div class="container_canvas">
+			    				<div class="container1_canvas_left">
+			    					<img src="img/pics/Stance.png"></img>
+			    				</div>
+			    				<div class="container1_canvas_right">
+			    					<h1 id="about_header">My name is Keenan.</h1>
+			    					<p id="about_p">
+			    					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan eget nulla nec hendrerit. Nulla congue viverra felis, id lobortis turpis elementum ac. Ut sollicitudin, nibh eget aliquam dapibus, quam magna tincidunt quam, a iaculis leo lectus ut metus. Aenean nec pulvinar nisi. Pellentesque aliquet augue tellus, non dapibus nulla placerat suscipit. Proin blandit luctus ex, at porta risus accumsan ac. Curabitur ac nisl fringilla, blandit erat non, pharetra urna. Sed tempus accumsan augue ut ornare. Fusce ornare dignissim orci sit amet varius.
+
+Ut neque dui, cursus sit amet quam sed, vehicula vulputate ante. Quisque vulputate tellus eu eros semper, nec vulputate justo tristique. Nunc et mauris imperdiet, rutrum felis non, tincidunt felis. Phasellus quam quam, sagittis in tincidunt nec, pharetra ut velit. Pellentesque malesuada odio a tristique imperdiet. Maecenas eu lorem neque. Praesent odio nisi, auctor sed velit at, placerat tincidunt mauris. Nam feugiat ligula sed placerat laoreet.
+			    					</p>
+			    				</div>
 			    			</div>
 			    		</div>
 			    		<div class="hsContent" 
@@ -131,6 +158,15 @@
 					data-anchor-target="#slide-3"
 				>
 			    	<div class="hsContainer">
+			    		<div class="container">
+			    			<div class="container2_canvas_left">
+			    				<h1>Follow Keenan on Spotify</h1>
+			    				<iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+			    			</div>
+			    			<div class="container2_canvas_right">
+			    				<iframe src="https://embed.spotify.com/?uri=spotify:album:7ycBtnsMtyVbbwTfJwRjSP" width="400" height="480" frameborder="0" allowtransparency="true"></iframe>
+			    			</div>
+			    		</div>
 						<div class="hsContent" 
 							data--50-bottom="opacity: 0;" 
 							data--200-bottom="opacity: 1;" 
@@ -174,6 +210,7 @@
 					data-anchor-target="#slide-5"
 				>
 			    	<div class="hsContainer">
+			    		<div class="main-video"><iframe width="760" height="515" src="https://www.youtube.com/embed/OFQ66alVAyw" frameborder="0" allowfullscreen></iframe></div>
 						<div class="hsContent" 
 							data-bottom-top="opacity: 0" 
 							data-25p-top="opacity: 0" 
@@ -195,6 +232,13 @@
 					data-anchor-target="#slide-6"
 				>
 			    	<div class="hsContainer">
+			    		<div class="container">
+			    			<div class="container_canvas_left">
+			    				<h1>Contact Us</h1>
+			    			</div>
+			    			<div class="container_canvas_right">
+			    			</div>
+			    		</div>
 						<div class="hsContent" 
 							data-bottom-top="opacity: 0" 
 							data-25p-top="opacity: 0" 
