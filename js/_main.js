@@ -15,6 +15,8 @@ $("#link_music").hide();
 $("#link_videos").hide();
 $("#link_contact").hide();*/
 
+Responsive();
+
 $(".hamburger-box").hide();
 $("#button-close").hide();
 
@@ -22,7 +24,6 @@ $("#about_header").hide();
 $("#about_p").hide();
 $(".main-video").hide();
 $(".container1_canvas_left img").hide();
-$(".container_canvas_left h1").hide();
 $(".container2_canvas_left").hide();
 $(".container2_canvas_right").hide();
 
@@ -62,6 +63,54 @@ $("#link_videos").click(function() {
 $("#link_contact").click(function() {
      $('html, body').animate({
          scrollTop: $("#slide-6").offset().top   }, 700);
+});
+
+$("#link_home_drop").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#slide-1").offset().top   }, 700);
+    $(".m-header2").animate({left:"-150px"},{duration:300});
+	$("#button-close").hide();
+	$("#button-open").show();
+});
+
+$("#link_about_drop").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#slide-2").offset().top   }, 700);
+    $(".m-header2").animate({left:"-150px"},{duration:300});
+	$("#button-close").hide();
+	$("#button-open").show();
+});
+
+$("#link_music_drop").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#slide-3").offset().top   }, 700);
+    $(".m-header2").animate({left:"-150px"},{duration:300});
+	$("#button-close").hide();
+	$("#button-open").show();
+});
+
+$("#link_news_drop").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#slide-4").offset().top   }, 700);
+    $(".m-header2").animate({left:"-150px"},{duration:300});
+	$("#button-close").hide();
+	$("#button-open").show();
+});
+
+$("#link_videos_drop").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#slide-5").offset().top   }, 700);
+    $(".m-header2").animate({left:"-150px"},{duration:300});
+	$("#button-close").hide();
+	$("#button-open").show();
+});
+
+$("#link_contact_drop").click(function() {
+     $('html, body').animate({
+         scrollTop: $("#slide-6").offset().top   }, 700);
+    $(".m-header2").animate({left:"-150px"},{duration:300});
+	$("#button-close").hide();
+	$("#button-open").show();
 });
 
 $("#button_explore").click(function() {
@@ -167,7 +216,6 @@ $(window).scroll(function () {
     	$(".main-video").delay(250).fadeIn();
     }
     if(scrollTop >= waypoint5){
-    	$(".container_canvas_left h1").delay(250).fadeIn();
     }
     
 
@@ -176,12 +224,142 @@ $(window).scroll(function () {
 $("#button-open").click(function() {
 	$(".m-header2").animate({left:"0px"},{duration:300});
 	$("#button-open").hide();
-	$("#button-close").show()
+	$("#button-close").show();
 });
 
 $("#button-close").click(function() {
-	$(".m-header2").animate({left:"-180px"},{duration:300});
+	$(".m-header2").animate({left:"-150px"},{duration:300});
 	$("#button-close").hide();
-	$("#button-open").show()
+	$("#button-open").show();
 });
+
+
+//RESPONSIVENESS
+
+$(window).resize(function () {
+    Responsive();
+});
+
+function Responsive(){
+	var w = window.innerWidth;
+	console.log(w);
+
+	if (w < 800){
+		$("#link_home").hide();
+		$("#link_about").hide();
+		$("#link_news").hide();
+		$("#link_music").hide();
+		$("#link_videos").hide();
+		$("#link_contact").hide();
+		$(".hamburger-box").show();
+		$(".header-link-container a").css("padding-top", "23px");
+
+		$("#iframe_video").width(478);
+        $("#iframe_video").height(300);
+	}
+	if (w > 800){
+		$("#link_home").show();
+		$("#link_about").show();
+		$("#link_news").show();
+		$("#link_music").show();
+		$("#link_videos").show();
+		$("#link_contact").show();
+		$(".hamburger-box").hide();
+		$(".header-link-container a").css("padding-top", "0");
+
+		$("#iframe_video").width(760);
+        $("#iframe_video").height(526);
+
+        $("#iframe_soundcloud").width(450);
+        $("#iframe_soundcloud").height(450);
+	}
+	if (w < 500){
+		$("#iframe_video").width(310);
+        $("#iframe_video").height(216);
+
+		$("#iframe_soundcloud").width(310);
+        $("#iframe_soundcloud").height(310);        
+	}
+
+	if (w < 1040){
+		$("#iframe_musiclist").width(280);
+        $("#iframe_musiclist").height(360);
+
+        $(".container2_canvas_left h1").css("font-size", "20px");
+        $(".container2_canvas_right h1").css("font-size", "20px");
+	}
+	if (w > 1040){
+		$("#iframe_musiclist").width(400);
+        $("#iframe_musiclist").height(480);
+
+        $(".container2_canvas_left h1").css("font-size", "25px");
+        $(".container2_canvas_right h1").css("font-size", "25px");
+	}
+	if (w < 750){
+		$(".container2_canvas_right").hide();
+		$(".container2_canvas_left").css("width", "100vw");
+
+		$(".container_canvas").css("margin", "0");
+        $(".container1_canvas_right h1").css("font-size", "20px");
+        $(".container1_canvas_right p").css("font-size", "13px");
+        $(".container1_canvas_right p").css("line-height", "20px");
+
+        $(".news_container").css("width", "310px");
+        $(".news_container h1").css("font-size", "20px");
+        $(".news_container p").css("font-size", "13px");
+	}
+	if (w > 750){
+		$(".container2_canvas_right").show();
+		$(".container2_canvas_left").css("width", "60vw");
+
+		$(".container_canvas").css("margin", "0 100px 0 100px");
+        $(".container1_canvas_right h1").css("font-size", "30px");
+        $(".container1_canvas_right p").css("font-size", "15px");
+        $(".container1_canvas_right p").css("line-height", "30px");
+
+        $(".news_container").css("width", "600px");
+        $(".news_container h1").css("font-size", "30px");
+        $(".news_container p").css("font-size", "15px");
+	}
+	if (w < 630){
+		$(".m-title").hide();
+
+		$(".container_canvas_right h1").css("font-size", "20px");
+		$(".container_canvas_right").css("width", "310px");
+
+		$(".footer .header2-link-container").hide();
+	}
+	if (w > 630){
+		$(".m-title").show();
+
+		$(".container_canvas_right h1").css("font-size", "30px");
+		$(".container_canvas_right").css("width", "500px");
+		$(".footer .header2-link-container").show();
+	}
+	if (w < 1100){
+		$(".container1_canvas_left").hide();
+		$(".container1_canvas_right").css("width", "100%");
+
+		$(".container_canvas_left").hide();
+		$(".container_canvas_right").css("width", "500px");
+		$(".container_canvas_right").css("float", "none");
+
+	}
+	if (w > 1100){
+		$(".container1_canvas_left").show();
+		$(".container1_canvas_right").css("width", "60%");
+
+		$(".container_canvas_left").show();
+		$(".container_canvas_right").css("width", "40vw");
+		$(".container_canvas_right").css("float", "right");
+	}
+	if (w < 630){
+		$(".m-title").hide();
+
+		$(".container_canvas_right h1").css("font-size", "20px");
+		$(".container_canvas_right").css("width", "310px");
+
+		$(".footer .header2-link-container").hide();
+	}
+}
 

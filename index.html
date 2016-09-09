@@ -6,10 +6,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Keenan | Official Site</title>
+        <title>Keɘnan | Official Site</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
+       	<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
 		<link rel="author" href="https://plus.google.com/u/0/109859280204979591787/about"/>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -38,12 +39,12 @@
         <!-- WEBSITE - START -->
         <div class="m-dropdown">
             <ul>
-                <a><li>Home</li></a>
-                <a><li>About</li></a>
-                <a><li>Music</li></a>
-                <a><li>News</li></a>
-                <a><li>Videos</li></a>
-                <a><li>Contact</li></a>
+                <a id="link_home_drop"><li>Home</li></a>
+                <a id="link_about_drop"><li>About</li></a>
+                <a id="link_music_drop"><li>Music</li></a>
+                <a id="link_news_drop"><li>News</li></a>
+                <a id="link_videos_drop"><li>Videos</li></a>
+                <a id="link_contact_drop"><li>Contact</li></a>
             </ul>
         </div>
         <div class="m-header">
@@ -66,10 +67,9 @@
         <div class="m-header2">
         	<div class="header2">
 	        	<div class="header2-link-container">
-		        	<a href=""><img src="img/socialmedia/Facebook.png"></img></a>
-		            <a href=""><img src="img/socialmedia/Twitter.png"></img></a>
-		            <a href=""><img src="img/socialmedia/Instagram.png"></img></a>
-		            <a href=""><img src="img/socialmedia/Youtube.png"></img></a>
+		        	<a href="https://www.facebook.com/KeenanMusicOfficial/" target="blank"><img src="img/socialmedia/Facebook.png"></img></a>
+		            <a href="https://www.instagram.com/keenan_typ_kreller/?hl=en" target="blank"><img src="img/socialmedia/Instagram.png"></img></a>
+		            <a href="https://www.youtube.com/channel/UCUl7jervEuKk2TbXAUmoYZw" target="blank"><img src="img/socialmedia/Youtube.png"></img></a>
 		        </div>
 		    </div>
 		    <div class="header2-button" id="button-open">
@@ -160,11 +160,11 @@ Ut neque dui, cursus sit amet quam sed, vehicula vulputate ante. Quisque vulputa
 			    	<div class="hsContainer">
 			    		<div class="container">
 			    			<div class="container2_canvas_left">
-			    				<h1>Follow Keenan on Spotify</h1>
-			    				<iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg&size=detail&theme=dark" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+			    				<h1>Check out Keenan's newest single: Yes Men</h1>
+			    				<iframe id="iframe_soundcloud" width="450" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/281684275&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 			    			</div>
 			    			<div class="container2_canvas_right">
-			    				<iframe src="https://embed.spotify.com/?uri=spotify:album:7ycBtnsMtyVbbwTfJwRjSP" width="400" height="480" frameborder="0" allowtransparency="true"></iframe>
+			    				<h1>Stay tuned for full release</h1>
 			    			</div>
 			    		</div>
 						<div class="hsContent" 
@@ -189,14 +189,24 @@ Ut neque dui, cursus sit amet quam sed, vehicula vulputate ante. Quisque vulputa
 					data-anchor-target="#slide-4"
 				>
 			    	<div class="hsContainer">
-						<div class="hsContent" 
-							data-bottom-top="opacity: 0" 
-							data-25p-top="opacity: 0" 
-							data-top="opacity: 1"  
-							data-anchor-target="#slide-4"
-						>
-				    		<h2>and share mine.</h2>
-			    		</div>
+			    		<div class="container">
+				    		<div class="news_container">
+				    			<ul>
+				    				<li>
+				    					<h1>September 6, 2016</h1>
+				    					<p>Keenan drops first single off upcoming release</p>
+				    				</li>
+				    			</ul>
+				    		</div>
+							<div class="hsContent" 
+								data-bottom-top="opacity: 0" 
+								data-25p-top="opacity: 0" 
+								data-top="opacity: 1"  
+								data-anchor-target="#slide-4"
+							>
+					    		<h2>and share mine.</h2>
+				    		</div>
+				    	</div>	
 			    	</div>
 			    	
 			    </div>
@@ -210,7 +220,7 @@ Ut neque dui, cursus sit amet quam sed, vehicula vulputate ante. Quisque vulputa
 					data-anchor-target="#slide-5"
 				>
 			    	<div class="hsContainer">
-			    		<div class="main-video"><iframe width="760" height="515" src="https://www.youtube.com/embed/OFQ66alVAyw" frameborder="0" allowfullscreen></iframe></div>
+			    		<div class="main-video"><iframe id="iframe_video" width="760" height="515" src="https://www.youtube.com/embed/OFQ66alVAyw" frameborder="0" allowfullscreen></iframe></div>
 						<div class="hsContent" 
 							data-bottom-top="opacity: 0" 
 							data-25p-top="opacity: 0" 
@@ -237,6 +247,21 @@ Ut neque dui, cursus sit amet quam sed, vehicula vulputate ante. Quisque vulputa
 			    				<h1>Contact Us</h1>
 			    			</div>
 			    			<div class="container_canvas_right">
+			    				<h1>Keenan</h1>
+			    				<p><a href="mailto:stayliveofficial@gmail.com?Subject=Inquiry" target="_top">stayliveofficial@gmail.com</a></p>
+			    				<h1>North River Records</h1>
+			    				<p><a href="mailto:info@northriverrecords.ca?Subject=Inquiry" target="_top">info@northriverrecords.ca</a></p>
+			    			</div>
+			    			<div class="footer">
+			    				<div class="header2-link-container">
+						        	<a href="https://www.facebook.com/KeenanMusicOfficial/" target="blank"><img src="img/socialmedia/facebook_white.png"></img></a>
+						            <a href="https://www.instagram.com/keenan_typ_kreller/?hl=en" target="blank"><img src="img/socialmedia/instagram_white.png"></img></a>
+						            <a href="https://www.youtube.com/channel/UCUl7jervEuKk2TbXAUmoYZw" target="blank"><img src="img/socialmedia/youtube_white.png"></img></a>
+						        </div>
+						        <div class="northriver2">
+						        <a href="http://www.northriverrecords.ca" target="_blank"><img src="img/northriverwhite.png"></img></a>
+						    	</div>
+						    	<p>Website by Knight UX</p>
 			    			</div>
 			    		</div>
 						<div class="hsContent" 
